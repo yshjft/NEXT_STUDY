@@ -32,3 +32,13 @@ pages/about/age.js ===> localhost:3000/about/age
            
 또한 functional 컴포넌트에서 state를 사용할 때 import useState를 할 필요가 없다. 이미 되어 있다.
 구지 react-router-dom을 사용하지 않고도 라우팅을 할 수 있다는 것이 굉장히 편하다.           
+           
+
+### 9월 23일 : 공통 컴포넌트
+헤더와 풋터와 같이 공통적으로 적용되는 컴포넌트를 Next에서 구현해 보았다.       
+        
+/components/layout/Footer.jsx            
+/components/layout/Header.jsx        
+/components/layout/index.jsx         
+
+Layout이라는 컴포넌트를 생성하여 각각의 페이지에서 공통으로 사용하는 컴포넌트를 구현한다. 

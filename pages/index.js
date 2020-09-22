@@ -1,25 +1,14 @@
+import Layout from '../components/layout'
 import Link from 'next/link'
-import React, {Component} from 'react'
+import React from 'react'
 
-class Index extends Component{
-
-  render(){
-    return(
-      <div>
-        <div>Header</div>
-        <div>
-          <div>first page</div>
-          <Link href='/info'>
-            <button>move info page!!</button>
-          </Link>
-          <Link href='/about'>
-            <button>move about page!!</button>
-          </Link>
-        </div>
-        <div>Footer</div>
-      </div>
-    )
-  }
+const Index=() =>{
+  return(
+    <Layout>
+      <div>first page</div>
+      <div>GREETING VISITORS!</div>
+    </Layout>
+  )
 }
 
 export default Index;
