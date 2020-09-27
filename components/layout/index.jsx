@@ -8,5 +8,13 @@ export default(props)=>{
             <Header/>
             {props.children}
             <Footer/>
+        <style jsx>{`
+            #wrap{
+                border: 1px solid blue; 
+                display : flex;
+                flex-direction:column;
+                justify-content : space-between;
+            }
+        `}</style>
         </div>   
     )}

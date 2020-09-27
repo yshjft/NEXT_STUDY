@@ -39,6 +39,9 @@ pages/about/age.js ===> localhost:3000/about/age
         
 /components/layout/Footer.jsx            
 /components/layout/Header.jsx        
-/components/layout/index.jsx         
+/components/layout/index.jsx          
+              
+Layout이라는 컴포넌트를 생성하여 각각의 페이지에서 공통으로 사용하는 컴포넌트를 구현한다.       
 
-Layout이라는 컴포넌트를 생성하여 각각의 페이지에서 공통으로 사용하는 컴포넌트를 구현한다. 
+### 9월 27일 : CSS 적용하기
+
