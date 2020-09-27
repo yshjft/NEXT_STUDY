@@ -4,10 +4,11 @@ export default ()=>{
     return(
         <div className='footer'>
             <div className="title">Next.js Study</div>
-            <a href='https://github.com/yshjft' className="link">This is my github Link</a>
+            <a href='https://github.com/yshjft' className="github">This is my github Link</a>
         <style jsx>{`
             .footer{
-                border:1px solid silver;
+                height: 100px;
+                border-top:1px solid silver;
                 text-align:center;
             }
             .title{
@@ -16,13 +17,15 @@ export default ()=>{
                 font-size : 25px;
                 font-weight : bold;
             }
-            .link{
+            .github{
                 margin-top:10px;
                 margin-bottom:10px;
+                text-decoration :none;
                 font-size : 20px;
                 font-weight : bold;
+                color : black;
             }
-            .link:hover{
+            .github:hover{
                 color: silver;
             }
         `}</style>

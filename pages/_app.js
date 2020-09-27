@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+// import '../styles/globals.css'
+import App, {Container} from 'next/app';
+import React from 'react';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+class MyApp extends App{
+  render(){
+    const {Component, pageProps} = this.props;
+
+    return(
+      <Container>
+        <Component {...pageProps}/>
+      </Container>
+    )    
+  }
 }
 
 export default MyApp

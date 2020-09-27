@@ -6,14 +6,19 @@ export default(props)=>{
     return(
         <div id="wrap">
             <Header/>
-            {props.children}
+            <div  className='main'>
+                {props.children}
+            </div>
             <Footer/>
         <style jsx>{`
             #wrap{
-                border: 1px solid blue; 
                 display : flex;
-                flex-direction:column;
-                justify-content : space-between;
+                width:100%;
+                height:100%;
+                flex-direction : column;
+            }
+            .main{
+                flex: 1;
             }
         `}</style>
         </div>   
