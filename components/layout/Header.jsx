@@ -4,7 +4,8 @@ import Link from 'next/link';
 export default ()=>{
     let headerItem =[
         {id : 0, name : 'INFO', link : '/info'},
-        {id : 1, name : 'ABOUT', link : '/about'}
+        {id : 1, name : 'ABOUT', link : '/about'},
+        {id : 2, name : 'REDUX', link : '/redux'}
     ]
     return(
         <div className="header">
