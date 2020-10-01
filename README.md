@@ -47,3 +47,9 @@ Layout이라는 컴포넌트를 생성하여 각각의 페이지에서 공통으
         
 ### 9월 30일 : 리덕스 사용하기
 현재는 농떙이 피는 중
+
+(설치)       
+npm install redux react-redux          
+npm install next-redux-wrapper         
+npm install -D redux-devtools-extension (이건 그냥 devtool, 필수가 아니다)             
+
