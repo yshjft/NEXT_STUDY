@@ -1,33 +1,31 @@
 import App, {Container} from 'next/app';
-import withRedux from 'next-redux-wrapper';
-import {Provider} from 'react-redux'
-import {createStore,  applyMiddleware, compose } from 'redux';
-// import reducer from '../reducers';;
 import React from 'react';
-
+import withRedux from 'next-redux-wrapper';
+import { Provider } from 'react-redux'; 
+import { createStore, compose, applyMiddleware } from 'redux';
+import reducer from '../reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 class MyApp extends App{
   render(){
-    const {Component, pageProps, store} = this.props;
+    const {Component, pageProps} = this.props;
 
     return(
       <Container>
-        <Provider store={store}>
           <Component {...pageProps}/>
-        </Provider>
       </Container>
     )    
   }
 }
 
-const congfigureStore = (initialState, options)=>{
+const configureStore = (initialState, options) => {
   const middlewares = [];
-  const enhancer = process.env.NODE_ENV === 'production' ?
+  const enhancer = process.env.NODE_ENV === 'production' ? 
     compose(applyMiddleware(...middlewares)) : 
-    compose(applyMiddleware(...middlewares)
-    );
+        composeWithDevTools(applyMiddleware(...middlewares));
   const store = createStore(reducer, initialState, enhancer);
   return store;
+
 }
 
-export default withRedux(congfigureStore)(MyApp);
+export default withRedux(configureStore)(MyApp);

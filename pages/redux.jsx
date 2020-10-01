@@ -54,10 +54,11 @@ function Redux(){
                 .componentArea{
                     margin-left : 15%;
                     margin-right : 15%;
+                    margin-bottom : 30px;
                     text-align : center;
                     border : 1px solid silver;
                     border-radius : 30px;
-                    height : 60%;
+                    min-height : 60%;
                 }
             `}</style>
         </Layout>
