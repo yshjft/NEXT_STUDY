@@ -7,13 +7,15 @@ import React, {useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 import { writeAction } from '../../reducers/crud';
 
-function ReduxWrite(){
-    const dispatch=useDispatch(); // dispatch를 사용하기 쉽게 하는 hook
+function ReduxWrite(props){
+    const {setMode} = props;
 
+    const dispatch=useDispatch(); // dispatch를 사용하기 쉽게 하는 hook
     const onClickSubmit =useCallback(()=>{// useCallback은 최적화를 위한 hook이다 이 앱에선 굳이 사용 안 해도 되는데 습관이 들면 좋기에 사용.
         let newString=document.getElementById('inputArea').value;
         dispatch(writeAction(newString));
         document.getElementById('inputArea').value=null;
+        setMode('READ');
     }, []);
 
     return(
@@ -28,8 +30,20 @@ function ReduxWrite(){
                 font-weight : bold;
             }
             input{
+                margin-top : 20px;
+                margin-right : 20px;
                 width : 50%;
                 height : 20px;
+            }
+            button{
+                border : 0;
+                outLine : 0;
+                background-color : white;
+                font-size : 20px;
+                font-weight : bold;
+            }
+            button:hover{
+                color : silver;
             }
         `}</style>
         </div>
