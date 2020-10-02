@@ -5,13 +5,11 @@ import { deleteAction, setTargetAction } from '../../reducers/crud';
 
 function ReduxRead(props){
     const {setDisplay} = props;
-    const {list} = useSelector(state => state.crud);  // store의 state를 불러오는 hook 
-    const [readList, setReadList]=useState(list);
+    const list = useSelector(state => state.crud.list);  // store의 state를 불러오는 hook 
     const dispatch=useDispatch();
 
     const onClickDelete = useCallback((index) => {
         dispatch(deleteAction(index));
-        setReadList(list);
     }, [])
     
     const onClickUpdate = useCallback((index)=>{
@@ -25,7 +23,7 @@ function ReduxRead(props){
             <div className="date">{`${new Date().getFullYear()}/${new Date().getMonth()+1}/${new Date().getDate()}`}</div>
             <div>
                 {
-                    readList.map((str, index)=>{
+                    list.map((str, index)=>{
                         return( <div key={index} className="str">
                             <div className="contents">{index+1}. {str}</div>
                             <button onClick={e=>onClickDelete(index)}>DELETE</button>

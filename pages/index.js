@@ -5,8 +5,21 @@ import React from 'react'
 const Index=() =>{
   return(
     <Layout>
-      <div>first page</div>
-      <div>GREETING VISITORS!</div>
+      <div className="mainContent">
+        <div className="aboutPage">First Page</div>
+      </div>
+      <style jsx>{`
+        .mainContent{
+          display : flex;
+          justify-content : center;
+          align-items: center;
+          height : 100%;
+        }
+        .aboutPage{
+          font-size : 150px;
+          font-weight : bold;
+        }
+      `}</style>
     </Layout>
   )
 }
