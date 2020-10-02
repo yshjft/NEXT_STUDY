@@ -53,3 +53,5 @@ npm install redux react-redux
 npm install next-redux-wrapper         
 npm install -D redux-devtools-extension (이건 그냥 devtool, 필수가 아니다)             
 
+### 10월 2일 : 리덕스를 이용한 간단한 todo list 구현
+너무 오래 걸렸다......        
